@@ -9,7 +9,7 @@
     --gutter: calc(var(--pad) * 2);
     --button-width: 0.333em;
     --notch-height: 3.33em;
-    --notch-weight: 33.3%;
+    --notch-width: 33.3%;
     --notch-radius: calc(var(--border-radius) - calc(var(--pad) * 2));
     --notch-duration: 0.333s;
     --ease: cubic-bezier(.666, 0, .4, 1);
@@ -35,7 +35,7 @@
 @keyframes appear{
     to{
         transform: scale3d(1, 1, 1);
-        opacity: 1; 
+        opacity: 1;
     }
 }
 
@@ -64,7 +64,7 @@ body{
     transform: scale3d(1.1, 1.1, 1);
     -webkit-animation: appear 1s var(--ease-out) forwards;
     animation: appear 1s var(--ease-out) forwards;
-    --webkit-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
 }
 
 .phone::before{
@@ -177,7 +177,7 @@ body{
 .bg .section:before{
     content: "";
     position: absolute;
-    inset: 0; 
+    inset: 0;
     border-radius: inherit;
     background: radial-gradient(85% 125% at 50% 140%, black 66.6%, transparent), radial-gradient(120% 120% at 50% 145%, hsl(calc(var(--g-h) - 45), 100%, 50%) 50%, transparent), radial-gradient(150% 100% at 50% 80%, transparent 35%, hsl(calc(var(--g-h) + 50), 100%, 99%));
     background-color: hsl(var(--g-h), var(--g-s), var(--g-l));
@@ -263,7 +263,7 @@ body{
 .notch-container:focus-within{
     max-height: calc(var(--notch-radius) * 3);
     --bar-height: 1em;
-    --bar-opacity: 1; 
+    --bar-opacity: 1;
 }
 
 .notch-container:focus-within .left, .notch-container:focus-within .right{
@@ -360,14 +360,14 @@ body{
 }
 
 .content .text:before{
-    content: "LÊ CHÍ THIỆN";
+    content: "MusicArtistName";
     order: 1;
     text-transform: uppercase;
 }
 
 .content .text:after{
     order: 2;
-    content: "NICK NAME COCA3979";
+    content: "MusicName";
     opacity: 0.5;
 }
 
@@ -440,7 +440,7 @@ body{
     z-index: 4;
     top: calc(var(--pad) * 2);
     right: calc(50% - calc(var(--notch-width) * 0.5));
-    margin-right:  calc(var(--pad) * 0.333);
+    margin-right: calc(var(--pad) * 0.333);
 }
 
 .camera::before{
@@ -477,7 +477,7 @@ input[type=radio]{
     transition-property: border-color, transform;
     background: radial-gradient(100% 100% at 50% 30%, var(--swatch-s1), var(--swatch-s2));
     opacity: 0;
-    transform: translate3d(0, 20%, 0) scale3d(0.75 0.75 1);
+    transform: translate3d(0, 20%, 0) scale3d(0.75, 0.75, 1);
     -webkit-animation: appear 0.333s var(--ease-out) forwards 0.75s;
     animation: appear 0.333s var(--ease-out) forwards 0.75s;
 }
@@ -552,7 +552,7 @@ input[type=radio]{
 
 .gold{
     --c-h: var(--gold);
-    --g-hue-adjust-2: -100; 
+    --g-hue-adjust-2: -100;
 }
 
 .space-black{
@@ -601,7 +601,7 @@ input[type=radio]{
 }
 
 #gold:checked~.pallette label[for=gold]{
-    border-color: hsl(var(--gold), 50%, 70%);
+    border-color: hsl(var(--gold), 50%, 75%);
 }
 
 #space-black:checked~.phone .bg .space-black{
